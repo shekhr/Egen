@@ -16,6 +16,7 @@ public class Main {
           case Utility.ROCK -> new UserChoice(Utility.ROCK).getResult();
           case Utility.PAPER -> new UserChoice(Utility.PAPER).getResult();
           case Utility.SCISSORS -> new UserChoice(Utility.SCISSORS).getResult();
+          default -> throw new IllegalStateException("Unexpected value: " + option.toLowerCase());
       }
   }
 

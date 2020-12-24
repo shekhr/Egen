@@ -19,11 +19,11 @@ public class UserChoice extends AIChoice {
 
     public void getResult(){
         System.out.println("User selected "+getUserChoice());
-        System.out.println("Computer selected "+getAiChoice());
+        System.out.println("Computer selected "+super.getAiChoice());
 
-        if(getUserChoice().equals(getAiChoice())) {
+        if(getUserChoice().equals(super.getAiChoice())) {
             System.out.println("It's a tie!");
-        } else if((getUserChoice().equals("rock") && getAiChoice().equals("scissors")) || (getUserChoice().equals("scissors") && getAiChoice().equals("paper")) || (getUserChoice().equals("paper") && getAiChoice().equals("rock"))) {
+        } else if((getUserChoice().equals("rock") && super.getAiChoice().equals("scissors")) || (getUserChoice().equals("scissors") && super.getAiChoice().equals("paper")) || (getUserChoice().equals("paper") && super.getAiChoice().equals("rock"))) {
             System.out.println("You won!");
         } else {
             System.out.println("You lost!");
